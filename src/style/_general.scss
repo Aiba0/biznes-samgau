@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body, html, button, input, textarea {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+$default-bias: 20px;
+
+.layout {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  @media screen and (max-width: $layout-l + $default-bias) {
+    max-width: $layout-m;
+  }
+  @media screen and (max-width: $layout-m + $default-bias) {
+    max-width: $layout-s;
+    padding: 60px 15px 0;
+  }
+  @media screen and (max-width: $layout-s + $default-bias) {
+    max-width: $layout-xs;
+  }
+  @media screen and (max-width: $layout-xs + $default-bias) {
+  }
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.page-title {
+  font-weight: 700;
+  margin: 20px 0;
+  color: $dark;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: .41px;
+  @media screen and (max-width: $layout-s){
+    display: none;
+  }
+}
